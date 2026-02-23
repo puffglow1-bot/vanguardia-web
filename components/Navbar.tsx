@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
           <div className="flex-shrink-0 flex items-center px-6 md:px-12 border-r border-brand-border">
             <Link to="/" className="group flex flex-col items-start justify-center">
               <h1 className="font-condensed text-3xl md:text-4xl text-brand-text tracking-tighter uppercase leading-none group-hover:opacity-70 transition-opacity duration-300">
-                Vanguardia
+                newtalentmanagement
               </h1>
             </Link>
           </div>

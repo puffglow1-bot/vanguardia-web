@@ -1,4 +1,3 @@
-import 'dotenv/config'; 
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -6,10 +5,19 @@ import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
 
 // Configuración de rutas para ES Modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+dotenv.config({ path: path.join(__dirname, '.env') });
+
+console.log("-----------------------------------------");
+console.log("🕵️ CHIVATO DE VARIABLES:");
+console.log("GMAIL_USER:", process.env.GMAIL_USER);
+console.log("EMAIL_USER:", process.env.EMAIL_USER);
+console.log("-----------------------------------------");
 
 const app = express();
 

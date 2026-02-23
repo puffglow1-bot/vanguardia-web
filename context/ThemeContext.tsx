@@ -12,7 +12,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(() => {
     // Check local storage or system preference
-    const saved = localStorage.getItem('vanguardia_theme');
+    const saved = localStorage.getItem('newtalentmanagement_theme');
     if (saved) return saved as Theme;
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   });
@@ -24,7 +24,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     } else {
       root.classList.remove('dark');
     }
-    localStorage.setItem('vanguardia_theme', theme);
+    localStorage.setItem('newtalentmanagement_theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {

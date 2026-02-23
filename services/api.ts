@@ -67,7 +67,7 @@ const STAFF_EN: StaffMember[] = [
 const TESTIMONIALS_ES: Testimonial[] = [
   {
     id: '1',
-    quote: "En Vanguardia no encontraron un contrato para mí, encontraron un propósito. Me ayudaron a madurar como hombre, lo que mejoró mi juego.",
+    quote: "En newtalentmanagement no encontraron un contrato para mí, encontraron un propósito. Me ayudaron a madurar como hombre, lo que mejoró mi juego.",
     author: "Matías Vargas",
     role: "Atleta",
     club: "Shanghai Port"
@@ -98,7 +98,7 @@ const TESTIMONIALS_ES: Testimonial[] = [
 const TESTIMONIALS_EN: Testimonial[] = [
   {
     id: '1',
-    quote: "At Vanguardia they didn't just find a contract for me, they found a purpose. They helped me mature as a man, which improved my game.",
+    quote: "At newtalentmanagement they didn't just find a contract for me, they found a purpose. They helped me mature as a man, which improved my game.",
     author: "Matías Vargas",
     role: "Athlete",
     club: "Shanghai Port"

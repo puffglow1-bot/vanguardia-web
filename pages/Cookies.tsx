@@ -13,7 +13,7 @@ const Cookies: React.FC = () => {
             <section>
               <h2 className="text-brand-text font-serif text-2xl mb-4">¿Qué son las cookies?</h2>
               <p>
-                Vanguardia Athletics utiliza cookies y tecnologías similares para garantizar el funcionamiento del sitio, medir la audiencia y ofrecer contenidos adaptados a sus intereses. Una cookie es un pequeño archivo de texto que se almacena en su navegador.
+                New Talent Management utiliza cookies y tecnologías similares para garantizar el funcionamiento del sitio, medir la audiencia y ofrecer contenidos adaptados a sus intereses. Una cookie es un pequeño archivo de texto que se almacena en su navegador.
               </p>
             </section>
 
@@ -38,13 +38,13 @@ const Cookies: React.FC = () => {
                         </tr>
                         <tr className="border-b border-brand-border">
                             <td className="py-4 px-2 text-brand-text font-medium">cookie_consent</td>
-                            <td className="py-4 px-2">Vanguardia</td>
+                            <td className="py-4 px-2">newtalentmanagement</td>
                             <td className="py-4 px-2">Recordar preferencias de privacidad.</td>
                             <td className="py-4 px-2">1 año</td>
                         </tr>
                         <tr className="border-b border-brand-border">
                             <td className="py-4 px-2 text-brand-text font-medium">session_id</td>
-                            <td className="py-4 px-2">Vanguardia</td>
+                            <td className="py-4 px-2">newtalentmanagement</td>
                             <td className="py-4 px-2">Mantener la sesión del usuario.</td>
                             <td className="py-4 px-2">Sesión</td>
                         </tr>

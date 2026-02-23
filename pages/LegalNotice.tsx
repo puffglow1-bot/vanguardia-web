@@ -16,42 +16,42 @@ const LegalNotice: React.FC = () => {
                 En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE), se exponen a continuación los datos identificativos de la empresa titular del sitio web:
               </p>
               <ul className="space-y-2 border-l border-brand-gold pl-6 mt-6 text-brand-text">
-                <li><strong>Denominación Social:</strong> Vanguardia Athletics S.L.</li>
+                <li><strong>Denominación Social:</strong> New Talent Management S.L.</li>
                 <li><strong>NIF:</strong> B-12345678</li>
                 <li><strong>Domicilio Social:</strong> Paseo de la Castellana 150, Madrid, 28046, España.</li>
                 <li><strong>Inscripción Registral:</strong> Inscrita en el Registro Mercantil de Madrid, Tomo 45.000, Folio 100, Hoja M-123456.</li>
-                <li><strong>Email de contacto:</strong> legal@vanguardia.com</li>
+                <li><strong>Email de contacto:</strong> legal@newtalentmanagement.com</li>
               </ul>
             </section>
 
             <section>
               <h2 className="text-brand-text font-serif text-2xl mb-4">2. Objeto</h2>
               <p>
-                El presente Aviso Legal regula las condiciones de uso, acceso y navegación del sitio web de Vanguardia Athletics. El acceso y/o uso del portal atribuye la condición de USUARIO, que acepta, desde dicho acceso y/o uso, las Condiciones Generales de Uso aquí reflejadas.
+                El presente Aviso Legal regula las condiciones de uso, acceso y navegación del sitio web de New Talent Management. El acceso y/o uso del portal atribuye la condición de USUARIO, que acepta, desde dicho acceso y/o uso, las Condiciones Generales de Uso aquí reflejadas.
               </p>
             </section>
 
             <section>
               <h2 className="text-brand-text font-serif text-2xl mb-4">3. Propiedad Intelectual e Industrial</h2>
               <p>
-                Vanguardia Athletics S.L. por sí o como cesionaria, es titular de todos los derechos de propiedad intelectual e industrial de su página web (imágenes, sonido, audio, vídeo, software o textos; marcas o logotipos, combinaciones de colores, estructura y diseño, etc.).
+                New Talent Management S.L. por sí o como cesionaria, es titular de todos los derechos de propiedad intelectual e industrial de su página web (imágenes, sonido, audio, vídeo, software o textos; marcas o logotipos, combinaciones de colores, estructura y diseño, etc.).
               </p>
               <p className="mt-4">
-                Quedan expresamente prohibidas la reproducción, la distribución y la comunicación pública, incluida su modalidad de puesta a disposición, de la totalidad o parte de los contenidos de esta página web, con fines comerciales, en cualquier soporte y por cualquier medio técnico, sin la autorización de Vanguardia Athletics S.L.
+                Quedan expresamente prohibidas la reproducción, la distribución y la comunicación pública, incluida su modalidad de puesta a disposición, de la totalidad o parte de los contenidos de esta página web, con fines comerciales, en cualquier soporte y por cualquier medio técnico, sin la autorización de New Talent Management S.L.
               </p>
             </section>
 
             <section>
               <h2 className="text-brand-text font-serif text-2xl mb-4">4. Exclusión de Garantías y Responsabilidad</h2>
               <p>
-                Vanguardia Athletics S.L. no se hace responsable, en ningún caso, de los daños y perjuicios de cualquier naturaleza que pudieran ocasionar, a título enunciativo: errores u omisiones en los contenidos, falta de disponibilidad del portal o la transmisión de virus o programas maliciosos o lesivos en los contenidos, a pesar de haber adoptado todas las medidas tecnológicas necesarias para evitarlo.
+                New Talent Management S.L. no se hace responsable, en ningún caso, de los daños y perjuicios de cualquier naturaleza que pudieran ocasionar, a título enunciativo: errores u omisiones en los contenidos, falta de disponibilidad del portal o la transmisión de virus o programas maliciosos o lesivos en los contenidos, a pesar de haber adoptado todas las medidas tecnológicas necesarias para evitarlo.
               </p>
             </section>
 
             <section>
               <h2 className="text-brand-text font-serif text-2xl mb-4">5. Legislación Aplicable y Jurisdicción</h2>
               <p>
-                La relación entre Vanguardia Athletics S.L. y el USUARIO se regirá por la normativa española vigente y cualquier controversia se someterá a los Juzgados y tribunales de la ciudad de Madrid, salvo que la ley aplicable disponga otra cosa.
+                La relación entre New Talent Management S.L. y el USUARIO se regirá por la normativa española vigente y cualquier controversia se someterá a los Juzgados y tribunales de la ciudad de Madrid, salvo que la ley aplicable disponga otra cosa.
               </p>
             </section>
 

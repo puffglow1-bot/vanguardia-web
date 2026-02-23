@@ -16,10 +16,10 @@ const Privacy: React.FC = () => {
                 De conformidad con el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), le informamos que sus datos serán tratados por:
               </p>
               <ul className="list-none space-y-1 mt-4 text-brand-text font-medium">
-                <li><strong>Identidad:</strong> Vanguardia Athletics S.L.</li>
+                <li><strong>Identidad:</strong> New Talent Management S.L.</li>
                 <li><strong>NIF:</strong> B-12345678</li>
                 <li><strong>Dirección:</strong> Paseo de la Castellana 150, Madrid, 28046.</li>
-                <li><strong>Delegado de Protección de Datos (DPO):</strong> dpo@vanguardia.com</li>
+                <li><strong>Delegado de Protección de Datos (DPO):</strong> dpo@newtalentmanagement.com</li>
               </ul>
             </section>
 
@@ -57,7 +57,7 @@ const Privacy: React.FC = () => {
             <section>
               <h2 className="text-brand-text font-serif text-2xl mb-4">5. Derechos del Interesado</h2>
               <p>
-                Cualquier persona tiene derecho a obtener confirmación sobre si en Vanguardia Athletics estamos tratando datos personales que les conciernan o no. Las personas interesadas tienen derecho a:
+                Cualquier persona tiene derecho a obtener confirmación sobre si en New Talent Management estamos tratando datos personales que les conciernan o no. Las personas interesadas tienen derecho a:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4 mt-4 text-brand-text">
                 <li>Acceder a sus datos personales.</li>
@@ -68,7 +68,7 @@ const Privacy: React.FC = () => {
                 <li>Portabilidad de los datos.</li>
               </ul>
               <p className="mt-4">
-                Puede ejercer sus derechos enviando un email a <a href="mailto:privacy@vanguardia.com" className="text-brand-turf underline">privacy@vanguardia.com</a>.
+                Puede ejercer sus derechos enviando un email a <a href="mailto:privacy@newtalentmanagement.com" className="text-brand-turf underline">privacy@newtalentmanagement.com</a>.
               </p>
             </section>
 

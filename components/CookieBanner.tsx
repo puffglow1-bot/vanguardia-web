@@ -7,7 +7,7 @@ const CookieBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem('vanguardia_cookie_consent');
+    const consent = localStorage.getItem('newtalentmanagement_cookie_consent');
     if (!consent) {
       // Delay slightly for better UX on initial load
       const timer = setTimeout(() => setIsVisible(true), 1500);
@@ -16,12 +16,12 @@ const CookieBanner: React.FC = () => {
   }, []);
 
   const handleAccept = () => {
-    localStorage.setItem('vanguardia_cookie_consent', 'accepted');
+    localStorage.setItem('newtalentmanagement_cookie_consent', 'accepted');
     setIsVisible(false);
   };
 
   const handleReject = () => {
-    localStorage.setItem('vanguardia_cookie_consent', 'rejected');
+    localStorage.setItem('newtalentmanagement_cookie_consent', 'rejected');
     setIsVisible(false);
   };
 

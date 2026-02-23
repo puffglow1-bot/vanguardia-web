@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
         {/* Brand Column */}
         <div className="p-8 md:p-12 border-b md:border-b-0 md:border-r border-brand-border min-h-[300px] flex flex-col justify-between">
           <h2 className="font-condensed text-5xl md:text-6xl text-brand-text uppercase leading-none tracking-tighter">
-            Vanguardia<br/>Athletics
+            newtalentmanagement<br/>Athletics
           </h2>
           <p className="text-brand-accent font-sans text-sm mt-8">
             Global representation for the modern elite athlete.
@@ -28,8 +28,8 @@ const Footer: React.FC = () => {
             Madrid, 28046<br />
             España
           </p>
-          <a href="mailto:info@vanguardia.com" className="text-brand-text font-condensed text-lg hover:underline transition-all uppercase mt-auto inline-flex items-center">
-            info@vanguardia.com <ArrowUpRight size={16} className="ml-2"/>
+          <a href="mailto:info@newtalentmanagement.com" className="text-brand-text font-condensed text-lg hover:underline transition-all uppercase mt-auto inline-flex items-center">
+            info@newtalentmanagement.com <ArrowUpRight size={16} className="ml-2"/>
           </a>
         </div>
 
