@@ -13,12 +13,6 @@ const __dirname = path.dirname(__filename);
 
 dotenv.config({ path: path.join(__dirname, '.env') });
 
-console.log("-----------------------------------------");
-console.log("🕵️ CHIVATO DE VARIABLES:");
-console.log("GMAIL_USER:", process.env.GMAIL_USER);
-console.log("EMAIL_USER:", process.env.EMAIL_USER);
-console.log("-----------------------------------------");
-
 const app = express();
 
 // IMPORTANTE PARA CLOUD RUN:
@@ -29,15 +23,15 @@ const PORT = process.env.PORT || 8080;
 app.use(helmet({
   contentSecurityPolicy: false,
 }));
+
 app.use(cors({
-  origin: [
-    'http://localhost:5173', // Para que te siga funcionando en tu ordenador
-    'http://localhost:3000', // Por si Vite usa el puerto 3000
-    'https://vanguardia-web.onrender.com' // TU WEB PÚBLICA (El invitado VIP)
-  ],
-  methods: ['GET', 'POST'],
+  origin: function (origin, callback) {
+    // Permite todo (útil si frontend y backend están en la misma app)
+    callback(null, true);
+  },
   credentials: true
 }));
+
 app.use(express.json());
 
 // 2. Configuración del Transporte de Email (GMAIL)
