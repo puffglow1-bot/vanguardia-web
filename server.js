@@ -29,7 +29,15 @@ const PORT = process.env.PORT || 8080;
 app.use(helmet({
   contentSecurityPolicy: false,
 }));
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173', // Para que te siga funcionando en tu ordenador
+    'http://localhost:3000', // Por si Vite usa el puerto 3000
+    'https://vanguardia-web.onrender.com' // TU WEB PÚBLICA (El invitado VIP)
+  ],
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
 app.use(express.json());
 
 // 2. Configuración del Transporte de Email (GMAIL)
