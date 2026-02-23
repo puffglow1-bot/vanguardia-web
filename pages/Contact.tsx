@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
 
     try {
       // Conexión real con el Backend
-      const response = await fetch('http://localhost:8080/api/contact', {
+      const response = await fetch('https://vanguardia-athletics-tu-url.onrender.com/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
