@@ -25,10 +25,12 @@ app.use(helmet({
 }));
 
 app.use(cors({
-  origin: function (origin, callback) {
-    // Permite todo (útil si frontend y backend están en la misma app)
-    callback(null, true);
-  },
+  origin: [
+    'http://localhost:5173', // Para cuando programas en tu ordenador
+    'http://localhost:3000', // Por si acaso
+    'https://vanguardia-web.onrender.com' // La URL real de tu web en internet
+  ],
+  methods: ['GET', 'POST'],
   credentials: true
 }));
 
