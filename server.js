@@ -37,14 +37,20 @@ app.use(cors({
 app.use(express.json());
 
 // 2. Configuración del Transporte de Email (GMAIL)
-// Nota: Para Gmail es necesario usar una "Contraseña de Aplicación" si tienes 2FA activado.
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.gmail.com', // Coordenada exacta del servidor de salida de Google
+  port: 465, // Puerto cifrado y seguro
+  secure: true, // Obligamos a usar la conexión segura
   auth: {
-    user: process.env.GMAIL_USER, // Tu dirección de Gmail
-    pass: process.env.GMAIL_PASS, // Tu contraseña de aplicación
+    user: process.env.GMAIL_USER, // ¡Mantenemos tus nombres de variables!
+    pass: process.env.GMAIL_PASS, // ¡Mantenemos tus nombres de variables!
   },
+  tls: {
+    // El "pase VIP" para que Render no bloquee la conexión por temas de certificados
+    rejectUnauthorized: false
+  }
 });
+
 
 // Verificación de conexión SMTP al arrancar
 transporter.verify(function (error, success) {
