@@ -40,18 +40,27 @@ app.use(cors({
 app.use(express.json());
 app.set('trust proxy', 1);
 
+
 // 2. Configuración del Transporte de Email (GMAIL)
 const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com', // Coordenada exacta del servidor de salida de Google
-  port: 587, // Puerto cifrado y seguro
-  secure: false, // Obligamos a usar la conexión segura
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false, // true para 465, false para otros puertos
   auth: {
-    user: process.env.GMAIL_USER, // ¡Mantenemos tus nombres de variables!
-    pass: process.env.GMAIL_PASS, // ¡Mantenemos tus nombres de variables!
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_PASS, 
   },
   tls: {
-    // El "pase VIP" para que Render no bloquee la conexión por temas de certificados
-    rejectUnauthorized: false
+    rejectUnauthorized: false 
+  }
+});
+
+// Verificación de conexión
+transporter.verify(function (error, success) {
+  if (error) {
+    console.warn("⚠️ Error conectando con Gmail:", error);
+  } else {
+    console.log("✅ Gmail listo para enviar correos.");
   }
 });
 
@@ -89,15 +98,15 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
 
   try {
     await transporter.sendMail({
-      from: `"${name}" <${process.env.GMAIL_USER}>`, // Remitente autenticado
-      to: process.env.MY_EMAIL_DESTINATION, // Destinatario final
-      replyTo: email, // Al responder en Gmail, le responderás al usuario
-      subject: `[Web] ${subject} - ${name}`,
+      from: `"${name}" <${process.env.GMAIL_USER}>`, // El remitente debe ser TU correo autenticado
+      to: process.env.MY_EMAIL_DESTINATION, 
+      replyTo: email, 
+      subject: `[Web] ${subject || 'Sin asunto'} - ${name}`,
       html: `
         <div style="font-family: sans-serif; padding: 20px; border: 1px solid #ccc;">
           <h2>Nuevo Mensaje de Contacto</h2>
           <p><strong>De:</strong> ${name} (${email})</p>
-          <p><strong>Asunto:</strong> ${subject}</p>
+          <p><strong>Asunto:</strong> ${subject || 'Sin asunto'}</p>
           <hr/>
           <p>${message}</p>
         </div>
@@ -111,6 +120,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
     return res.status(500).json({ success: false, message: "Error del servidor." });
   }
 });
+
 
 // 5. Servir Frontend (Archivos estáticos)
 app.use(express.static(path.join(__dirname, 'dist')));
