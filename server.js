@@ -15,6 +15,9 @@ dotenv.config({ path: path.join(__dirname, '.env') });
 
 const app = express();
 
+// AÑADE ESTA LÍNEA AQUÍ: Le dice a Express que confíe en Render
+app.set('trust proxy', 1);
+
 // IMPORTANTE PARA CLOUD RUN:
 // Cloud Run inyecta la variable PORT, que por defecto suele ser 8080.
 const PORT = process.env.PORT || 8080;
@@ -35,12 +38,13 @@ app.use(cors({
 }));
 
 app.use(express.json());
+app.set('trust proxy', 1);
 
 // 2. Configuración del Transporte de Email (GMAIL)
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com', // Coordenada exacta del servidor de salida de Google
-  port: 465, // Puerto cifrado y seguro
-  secure: true, // Obligamos a usar la conexión segura
+  port: 587, // Puerto cifrado y seguro
+  secure: false, // Obligamos a usar la conexión segura
   auth: {
     user: process.env.GMAIL_USER, // ¡Mantenemos tus nombres de variables!
     pass: process.env.GMAIL_PASS, // ¡Mantenemos tus nombres de variables!
